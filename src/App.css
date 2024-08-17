@@ -1,0 +1,35 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+h1{
+font-size: 20px;
+font-weight: 700;
+width: 300px;
+text-align: center;
+}
+
+.dataText{
+  font-size: 14px;
+  font-weight: 400;
+  margin: 12px 0;
+  width: 300px;
+  text-align: center;
+}
+.reset {
+  margin-right: 4px;
+  border-radius: 6px;
+  border: 1px solid #000;
+  width: 75px;
+  height: 25px;
+  font-weight: 500;
+  background-color: #c2c2c2;
+  cursor: pointer;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.reset:hover {
+  background-color: #5b5b5b;
+  color: whitesmoke;
+}
