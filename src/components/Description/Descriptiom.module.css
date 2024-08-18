@@ -1,0 +1,14 @@
+.mainHeader {
+    font-size: 20px;
+    font-weight: 700;
+    width: 300px;
+    text-align: center;
+}
+
+.dataText {
+    font-size: 14px;
+    font-weight: 400;
+    margin: 12px 0;
+    width: 300px;
+    text-align: center;
+}

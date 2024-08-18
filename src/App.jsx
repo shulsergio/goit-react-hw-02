@@ -4,15 +4,16 @@ import './App.css'
 import Options from './components/Options/Options.jsx'
 import Feedback from "./components/Feedback/Feedback.jsx"
 import Notification from './components/Notification/Notification.jsx';
+import Description from './components/Description/Description.jsx';
 
 function App() {
 
   const [items, setValues] = useState(() => {
-    const savedItems = window.localStorage.getItem("items");
-    console.log('savedItems-', savedItems);
-        console.log('JSON.parse(savedItems)-',JSON.parse(savedItems));
-    if (savedItems !== null) { 
-      return JSON.parse(savedItems) } else {
+    const lsItems = window.localStorage.getItem("items");
+    console.log('savedItems-', lsItems);
+        console.log('JSON.parse(savedItems)-',JSON.parse(lsItems));
+    if (lsItems !== null) { 
+      return JSON.parse(lsItems) } else {
       return {
         good: 0,
         neutral: 0,
@@ -53,16 +54,15 @@ function App() {
   
   return (
     <>
-      <h1>Sip Happens Café</h1>
-      <p className="dataText">Please leave your feedback about our service by selecting one of the options below.</p>
-      <Options text="Good" onClick={() => updateFeedback('good')} />
-      <Options text="Neutral" onClick={() => updateFeedback('neutral')} />
-      <Options text="Bad" onClick={() => updateFeedback('bad')} />
+      <Description/>
+      <Options updateFeedback={updateFeedback}
+        resetFeedback={resetFeedback}>
+                totalFeedback={totalFeedback}
+      </Options>
 
     {totalFeedback > 0 ?
         <>
-          <button className='reset' onClick={resetFeedback}>Reset</button>
-          <Feedback items={items}
+   <Feedback items={items}
             totalFeedback={totalFeedback}
             positiveFeedback={positiveFeedback}>
           </Feedback>
