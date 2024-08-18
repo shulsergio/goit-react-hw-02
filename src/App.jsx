@@ -2,8 +2,7 @@ import { useState, useEffect } from 'react'
 
 import './App.css'
 import Options from './components/Options/Options.jsx'
-import Feedback from './Components/Feedback/Feedback.jsx';
-
+import Feedback from "./Components/Feedback/Feedback.jsx"
 
 function App() {
 
@@ -61,8 +60,9 @@ function App() {
 
     {totalFeedback > 0 ?
         <>
-      <button className='reset' onClick={resetFeedback}>Reset</button>
-          <Feedback items={items}
+          <button className='reset' onClick={resetFeedback}>Reset</button>
+          
+<Feedback items={items}
             totalFeedback={totalFeedback}
             positiveFeedback={positiveFeedback}>
           </Feedback>
