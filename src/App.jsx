@@ -51,13 +51,12 @@ function App() {
   //   key,
   //   value
   // }));
-  
+    console.log("totalFeedback арр- ",totalFeedback);
   return (
     <>
       <Description/>
-      <Options updateFeedback={updateFeedback}
+      <Options totalFeedback={totalFeedback} updateFeedback={updateFeedback}
         resetFeedback={resetFeedback}>
-                totalFeedback={totalFeedback}
       </Options>
 
     {totalFeedback > 0 ?

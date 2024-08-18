@@ -1,7 +1,7 @@
 import css from "./Options.module.css"
-export default function Options({ updateFeedback, resetFeedback, totalFeedback }) {
-  console.log("updateFeedback- ",updateFeedback);
-  console.log("totalFeedback- ",totalFeedback);
+export default function Options({totalFeedback, updateFeedback, resetFeedback}) {
+  // console.log("updateFeedback- ",updateFeedback);
+  console.log("totalFeedback опшн- ",totalFeedback);
   // console.log(positiveFeedback);
   return (
 <>
@@ -9,7 +9,9 @@ export default function Options({ updateFeedback, resetFeedback, totalFeedback }
   <button className={css.buttonMainApp} onClick={() => updateFeedback('neutral')} >Neutral  </button>
   <button className={css.buttonMainApp} onClick={() => updateFeedback('bad')} >Bad </button>
 
-{totalFeedback > 0 ? <button className={css.buttonMainApp} onClick={resetFeedback}>Reset</button>: null}
+{ totalFeedback > 0 ?
+<button className={css.buttonMainApp} onClick={resetFeedback}>Reset</button>
+: null }
       
 
  </> );
