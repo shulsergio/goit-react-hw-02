@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import Options from './components/Options/Options.jsx'
 import Feedback from "./components/Feedback/Feedback.jsx"
+import Notification from './components/Notification/Notification.jsx';
 
 function App() {
 
@@ -61,12 +62,11 @@ function App() {
     {totalFeedback > 0 ?
         <>
           <button className='reset' onClick={resetFeedback}>Reset</button>
-          
-<Feedback items={items}
+          <Feedback items={items}
             totalFeedback={totalFeedback}
             positiveFeedback={positiveFeedback}>
           </Feedback>
-    </> : <p>No feedback yet</p> }
+    </> : <Notification/> }
     </>
   );
 }
